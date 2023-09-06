@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Billing</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+      <!-- Responsive-->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='responsive.css') }}">
+      <!-- fevicon -->
+      <link rel="icon" href="{{ url_for('static', filename='images/fevicon.png') }}" type="image/gif">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='jquery.mCustomScrollbar.min.css') }}">
+      <!-- Tweaks for older IEs-->
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='owl.carousel.min.css') }}">
+
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='owl.theme.default.min.css') }}">
+   <body>
+      <!-- header section start -->
+      <div class="header_section">
+         <div class="container-fluid header_main">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="logo" href="#"><h1 style="font-weight: bold;">PURCHACED ITEMS</h1></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- about section start --> 
+      <div class="about_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8 col-sm-12">
+
+                  <h2 class="most_text">ITEMS LIST</h2>
+                  <div>
+                  <ul class="itemslist">
+                    <li style="color: green; text-align: center">ITEMS</li>
+                    <li>Brinjal     </li>
+                    <li>Cabbage     </li>
+                    <li>Green Banana</li>
+                    <li>Lemon       </li>
+                    <li>Tomato      </li>
+                    <li>Total      </li>
+                  </ul>
+                  <ul class="itemslist">
+                    <li style="color: blue; text-align: center">WEIGHT</li>
+                    <li>{{brinjal}} kg</li>
+                    <li>{{cabbage}} kg</li>
+                    <li>{{green_banana}} kg</li>
+                    <li>{{lemon}} kg</li>
+                    <li>{{tomato}} kg</li>
+                    <li>{{total_weight}} kg</li>
+                  </ul>
+                  <ul class="itemslist">
+                    <li style="color: #ff8000; text-align: center">COST</li>
+                    <li>{{brinjal_price}}</li>
+                    <li>{{cabbage_price}}</li>
+                    <li>{{green_banana_price}}</li>
+                    <li>{{lemon_price}}</li>
+                    <li>{{tomato_price}}</li>
+                    <li>{{total}}</li>
+                  </ul>
+                  </div>
+               </div>
+               <div>
+               <form action="/app.html" method="post">
+                  <button id="btn" type="submit" class="contact_bt">CONTINUE SHOPPING</button>
+                  </form>
+               <form action="/success" method="post">
+                  <button id="btn" type="submit" class="contact_bt" style="margin-top: 50px">PRINT COST</button>
+                  </form>
+               </div>
+               <div class="col-lg-4 col-sm-12">
+                  <h1 class="about_taital">About</h1>
+                  <p class="about_text">After clicking PRINT COST button, An alert will get turned on. Place the RFID tag on the RFID reader to print the bill. You will get redirected to the home page afterwards.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding margin_top_90">
+         <div class="container">
+            <div class="footer_menu">
+               <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="features.html">Features</a></li>
+               </ul>
+            </div>
+            <div class="contact_menu">
+               <ul>
+                  <li><a href="#"><img src="{{ url_for('static', filename='images/call-icon.png') }}"></a></li>
+                  <li>+91 7806972892 | +91 8903963582 | +91 9510927406</li>
+                  <li><a href="blog.html"><img src="{{ url_for('static', filename='images/mail-icon.png') }}"></a></li>
+                  <li><a href="features.html">sajith4457@gmail.com</a></li>
+                  <li><a href="features.html">jerlinjacob7@gmail.com</a></li>
+                  <li><a href="features.html">albinalbi@gmail.com</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/jquery-3.0.0.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/plugin.js') }}"></script>
+      <!-- sidebar -->
+      <script src="{{ url_for('static', filename='js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+      <!-- javascript --> 
+      <script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+   </body>
+</html>
